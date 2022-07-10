@@ -1,0 +1,5 @@
+{
+    "chromeWebSecurity": false,
+    "watchForFileChanges": false,
+    "base_url": "https://www.saucedemo.com/"
+}
