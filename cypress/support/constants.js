@@ -1,6 +1,8 @@
 module.exports = {
-    baseUrl: "https://www.saucedemo.com/",
-    pageTitle: "Swag Labs",
-    pageUrl: "/inventory.html",
-    productListSize: "6"
+    pageTitle: "Booking.com",
+    location: "Dilijan",
+    startdate: "3",
+    enddate: "8",
+    numberOfStars: 4
 }
+  

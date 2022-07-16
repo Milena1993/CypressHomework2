@@ -1,5 +1,5 @@
 {
-    "chromeWebSecurity": false,
-    "watchForFileChanges": false,
-    "base_url": "https://www.saucedemo.com/"
+    "baseUrl": "https://www.booking.com",
+    "chromeWebSecurity": false
+    
 }
