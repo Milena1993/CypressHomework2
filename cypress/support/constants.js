@@ -5,4 +5,4 @@ module.exports = {
     enddate: "8",
     numberOfStars: 4
 }
-  
+

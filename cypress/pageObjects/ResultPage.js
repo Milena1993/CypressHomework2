@@ -17,32 +17,31 @@ class ResultPage {
         return ('input[value="class=4"]')
     }
 
-    getFourStarList(){
+    getFourStarList() {
         return cy.get('[data-testid="rating-squares"]')
     }
-     
-    getFourStarItems(){
+
+    getFourStarItems() {
         return cy.get('[class="b6dc9a9e69 adc357e4f1 fe621d6382"]')
     }
-        
+
 
 
     filterByStars() {
-        this.getStarBox().find('input[value="class=4"]').check()
-
+        this.getStarBox().find('input[value="class=' + constants.numberOfStars + '"]').check()
 
     }
-   
-
-    verifyTheLocationName(){
+    verifyTheLocationName() {
         this.getResultItems().each($el => {
             let txt = $el.text()
             expect(txt).to.be.equal(constants.location)
             cy.log(txt)
 
-    })
+        })
     }
-    verifyTheStars() {
+
+    verifyTheFourStars() {
+
         this.getFourStarList().each($el => {
             let stars = $el.find('[class="b6dc9a9e69 adc357e4f1 fe621d6382"]')
             expect(stars).to.have.lengthOf(constants.numberOfStars)

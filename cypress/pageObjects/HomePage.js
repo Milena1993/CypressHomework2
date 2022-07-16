@@ -21,9 +21,6 @@ class HomePage {
         return cy.get('ul.c-autocomplete__list')
     }
 
-    getSuggestedOptions() {
-        return cy.get('li[data-label="Dilijan, Armenia"]')
-    }
 
     getCheckin() {
         return cy.get('.xp__dates__checkin')
@@ -58,8 +55,7 @@ class HomePage {
         this.getSearchField().type(constants.location)
         cy.wait(2000)
         this.getSuggestedList().each(($el) => {
-            const opt = $el.find('li[data-label="Dilijan, Armenia"]')
-            // if (txt === "Dilijan")
+            const opt = $el.find('li[data-label=' + constants.location + ']')
             cy.wrap($el).click({ force: true });
 
         })
@@ -78,15 +74,14 @@ class HomePage {
         this.getdate().each(($el) => {
             var enddate = $el.find('span').text()
             if (enddate == constants.enddate)
-                cy.wrap($el).click({force: true})
-
-
+                cy.wrap($el).click({ force: true })
         })
     }
     increaseAdultNumber() {
         this.getGuestCount().click()
         this.getAddAdultNumber().click()
     }
+
     verifyTheHomePage() {
         this.getPageTitle().should("include", constants.pageTitle);
         this.getPageLogo().should("be.visible");
