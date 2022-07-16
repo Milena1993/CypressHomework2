@@ -63,8 +63,8 @@ class HomePage {
     selectCheckinDate() {
         this.getCheckin().click()
         this.getdate().each(($el) => {
-            var startdate = $el.find('span').text()
-            if (startdate == constants.startdate)
+            var startDate = $el.find('span').text()
+            if (startDate == constants.startDate)
                 cy.wrap($el).click()
 
         })
@@ -72,8 +72,8 @@ class HomePage {
     selectCheckoutdate() {
         this.getCheckout().click()
         this.getdate().each(($el) => {
-            var enddate = $el.find('span').text()
-            if (enddate == constants.enddate)
+            var endDate = $el.find('span').text()
+            if (endDate == constants.endDate)
                 cy.wrap($el).click({ force: true })
         })
     }

@@ -1,8 +1,8 @@
 module.exports = {
     pageTitle: "Booking.com",
     location: "Dilijan",
-    startdate: "3",
-    enddate: "8",
+    startDate: "3",
+    endDate: "8",
     numberOfStars: 4
 }
 
